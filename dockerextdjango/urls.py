@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url, include
 from rest_framework import routers
-from rest_framework.authtoken import views as authviews
+from rest_framework_jwt.views import obtain_jwt_token
 from . import views
 
 router = routers.DefaultRouter()
@@ -27,6 +27,6 @@ router.register(r'groups', views.GroupViewSet)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include(router.urls)),
-    url(r'^api-token-auth/', authviews.obtain_auth_token),
+    url(r'^authenticate/', obtain_jwt_token),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
