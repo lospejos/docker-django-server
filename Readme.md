@@ -30,24 +30,5 @@ Make a sencha production build first:
 `sencha app build`
 
 <pre>
-client:
-    build: ./client
-    restart: always
-    ports:
-      - "80:80"
-    links:
-      - server
-server:
-    build: ./server
-    restart: always
-    ports:
-     - "9000:9000"
-    links:
-     - mongo
-mongo:
-  image: mongo
-  command: --smallfiles
-  restart: always
-  ports:
-    - "27017:27017"
+TODO
 </pre>
