@@ -1,4 +1,8 @@
-# This application requires the dockerextnode client
+# Run Django
+
+`python manage.py runserver 8080`
+
+# This application requires the docker ext client
 
 https://github.com/savelee/docker-ext-client
 
