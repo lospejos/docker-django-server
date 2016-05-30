@@ -15,7 +15,7 @@ And a running MySQL server.
 `pip install django`
 
 4. Install all the requirements:
-`pip install -r requirements.txt`
+`pip install -r dockerextdjango/requirements.txt`
 
 5. Create a inside *dockerextdjango/dockerextdjango* the following file:
 *local_settings.py*:
