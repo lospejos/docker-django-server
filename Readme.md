@@ -20,7 +20,7 @@ And a running MySQL server.
 5. Create a inside *dockerextdjango/dockerextdjango* the following file:
 *local_settings.py*:
 
----
+```python
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -38,17 +38,17 @@ SECRET_KEY = 'g&mbsv)1yz$qp*&d5g$ym5eu^y0!b&)%kot4eac%2rh6&q*5(e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
----
+```
 
 6. Executes the following SQL script on your MySQL server, you could
 run mysql from the command-line (`mysql -u root -p`), or you can run PhPMyAdmin and run it from there.
 
-----
+```sql
 CREATE DATABASE extdjango;
 CREATE USER 'mymysqlusername'@'localhost' IDENTIFIED BY 'mymsqlpassword';
 GRANT ALL PRIVILEGES ON extdjango.* TO 'mymysqlusername'@'localhost';
 FLUSH PRIVILEGES;
-----
+```
 
 7. Save the file, and run the following commands from the command-line, to use the database in your Python project:
 
@@ -69,7 +69,7 @@ Now you are good, to go!
 https://github.com/savelee/docker-ext-client
 
 You will need to edit the *client/app/utils/Contants.js* file to:
-<pre>
+```javascript
 Ext.define('Client.utils.Constants', {
     singleton: true,
 
@@ -78,7 +78,7 @@ Ext.define('Client.utils.Constants', {
     'TOKEN_PREFIX': 'JWT',
     'DISABLE_TOKEN': false
 });
-</pre>
+```
 
 # Visit Sencha client app and login:
 
