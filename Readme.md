@@ -6,16 +6,16 @@ And a running MySQL server.
 * https://www.python.org/downloads/
 
 1. Install VirtualEnv:
-`pip install virtual env`
+`pip install virtualenv`
 
 2. Run the following command:
-`python virtualenv myenv`
+`python -m virtualenv myenv`
 
 3. Install Django:
 `pip install django`
 
 4. Install all the requirements:
-`pip install -r dockerextdjango/requirements.txt`
+`pip install -r requirements.txt`
 
 5. Create a inside *dockerextdjango/dockerextdjango* the following file:
 *local_settings.py*:
@@ -64,6 +64,13 @@ Now you are good, to go!
 
 `python manage.py runserver 8080`
 
+Test the following endpoint:
+http://127.0.0.1:8080/users
+and:
+http://127.0.0.1:8080/users/?format=json
+
+You should see your superuser account in a JSON feed.
+
 # This application requires the docker ext client
 
 https://github.com/savelee/docker-ext-client
@@ -91,6 +98,4 @@ Ext.define('Client.utils.Constants', {
 Make a sencha production build first:
 `sencha app build`
 
-<pre>
 TODO
-</pre>
